@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name CFS_Crystal_32kHz)(type Legacy)(uri ${KIPRJMOD}/CFS-20632768DZFB/KiCad/CFS-20632768DZFB.mod)(options "")(descr ""))
+)

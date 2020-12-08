@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP CFS-20632768DZFB
+D Crystals 32.768 KHz 12.5pF CYLINDER CRYSTAL
+K
+F http://cfd.citizen.co.jp/english/prod-tech/product/pdf/datasheet_TF/CFS-206_CFS-145_E.pdf
+$ENDCMP
+#
+#End Doc Library

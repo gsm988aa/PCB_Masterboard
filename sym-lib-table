@@ -1,3 +1,5 @@
 (sym_lib_table
   (lib (name CFS_Crystal_32k)(type Legacy)(uri C:/Users/Administrator/Desktop/PCB/MasterBoard/CFS-20632768DZFB/KiCad/CFS-20632768DZFB.lib)(options "")(descr ""))
+  (lib (name HR911105A)(type Legacy)(uri C:/Users/Administrator/Desktop/PCB/MasterBoard/HR911105A/KiCad/HR911105A.lib)(options "")(descr ""))
+  (lib (name WIZW5500)(type Legacy)(uri C:/Users/Administrator/Desktop/PCB/MasterBoard/W5500/KiCad/W5500.lib)(options "")(descr ""))
 )

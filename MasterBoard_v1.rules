@@ -1,0 +1,151 @@
+
+(rules PCB MasterBoard_v1
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (eu.mihosoft.freerouting.autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 1978)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.0)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.0)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    "Net-(U1-Pad141)" "Net-(U1-Pad140)" "Net-(U1-Pad139)" BOOT0 "Net-(U1-Pad137)" "Net-(U1-Pad136)" "Net-(U1-Pad132)" "Net-(U1-Pad129)"
+    "Net-(U1-Pad128)" "Net-(U1-Pad127)" "Net-(U1-Pad126)" "Net-(U1-Pad125)" "Net-(U1-Pad124)" "Net-(U1-Pad123)" "Net-(U1-Pad122)" "Net-(U1-Pad119)"
+    "Net-(U1-Pad118)" "Net-(U1-Pad117)" "Net-(U1-Pad116)" "Net-(U1-Pad115)" "Net-(U1-Pad114)" "Net-(U1-Pad113)" "Net-(U1-Pad112)" "Net-(U1-Pad111)"
+    "Net-(U1-Pad106)" "Net-(U1-Pad104)" "Net-(U1-Pad103)" "Net-(U1-Pad100)" "Net-(U1-Pad99)" "Net-(U1-Pad98)" "Net-(U1-Pad93)" "Net-(U1-Pad92)"
+    "Net-(U1-Pad91)" "Net-(U1-Pad90)" "Net-(U1-Pad89)" "Net-(U1-Pad88)" "Net-(U1-Pad87)" "Net-(U1-Pad86)" "Net-(U1-Pad85)" "Net-(U1-Pad82)"
+    "Net-(U1-Pad81)" "Net-(U1-Pad80)" "Net-(U1-Pad79)" "Net-(U1-Pad78)" "Net-(U1-Pad77)" "Net-(U1-Pad70)" "Net-(U1-Pad69)" "Net-(U1-Pad68)"
+    "Net-(U1-Pad67)" "Net-(U1-Pad66)" "Net-(U1-Pad65)" "Net-(U1-Pad64)" "Net-(U1-Pad63)" "Net-(U1-Pad60)" "Net-(U1-Pad59)" "Net-(U1-Pad58)"
+    "Net-(U1-Pad57)" "Net-(U1-Pad56)" "Net-(U1-Pad55)" "Net-(U1-Pad54)" "Net-(U1-Pad53)" "Net-(U1-Pad50)" "Net-(U1-Pad49)" "Net-(U1-Pad47)"
+    "Net-(U1-Pad46)" "Net-(U1-Pad45)" "Net-(U1-Pad44)" "Net-(U1-Pad40)" "Net-(U1-Pad37)" "Net-(U1-Pad36)" "Net-(U1-Pad35)" "Net-(U1-Pad34)"
+    "Net-(U1-Pad29)" "Net-(U1-Pad28)" "Net-(U1-Pad27)" "Net-(U1-Pad26)" NRST "Net-(U1-Pad22)" "Net-(U1-Pad21)" "Net-(U1-Pad20)"
+    "Net-(U1-Pad19)" "Net-(U1-Pad18)" "Net-(U1-Pad15)" "Net-(U1-Pad10)" "Net-(U1-Pad7)" "Net-(U1-Pad5)" "Net-(U1-Pad4)" "Net-(U2-Pad1)"
+    "Net-(U2-Pad2)" "Net-(U3-Pad1)" "Net-(U3-Pad2)" "Net-(U4-Pad14)" "Net-(U4-Pad11)" "Net-(U4-Pad13)" "Net-(U4-Pad12)" "Net-(U4-Pad10)"
+    "Net-(U4-Pad7)" "Net-(U4-Pad6)" "Net-(U4-Pad5)" "Net-(U4-Pad2)" "Net-(U4-Pad1)" +12V "Net-(C19-Pad1)" GND
+    +5V "Net-(D4-Pad1)" "Net-(IC1-Pad47)" "Net-(IC1-Pad46)" +3V3 "Net-(IC1-Pad42)" "Net-(IC1-Pad41)" "Net-(IC1-Pad40)"
+    "Net-(IC1-Pad39)" "Net-(IC1-Pad38)" "W5500_RST" "W5500_INT" "W5500_SPI2_MOSI" "W5500_SPI2_MISO" "W5500_SPI2_SCLK" "W5500_SCS"
+    XO XI ACTLED "Net-(IC1-Pad26)" LINKLED "Net-(IC1-Pad24)" "Net-(IC1-Pad23)" "Net-(C65-Pad1)"
+    "Net-(C64-Pad1)" "Net-(IC1-Pad18)" "Net-(IC1-Pad13)" "Net-(IC1-Pad12)" "Net-(IC1-Pad10)" "Net-(IC1-Pad7)" RXP RXN
+    TXP TXN "Net-(J9-Pad12)" "Net-(J9-Pad9)" "Net-(J9-Pad8)" "Net-(J9-Pad7)" RXNNET RCT
+    "Net-(J9-Pad4)" RXPNET VDD11 VSS11 "Bak_SPI_SCK" "Net-(U1-Pad135)" JTRST JTDO\SWO
+    VDD10 VSS10 VDD9 VSS9 JTDI JTCK\SWCLK VDD8 VSS8
+    JTMS\SWDIO "USART1_RX" "USART1_TX" VDD7 VSS7 VDD6 VSS6 VDD5
+    VSS5 VDD4 VSS4 VDD3 VSS3 BOOT1 "M_SPI1_MOSI" "M_SPI1_MISO"
+    "M_SPI1_SCK" VDD2 VSS2 VDDA VREF+ "VREF-" VSSA "Net-(C2-Pad1)"
+    "Net-(C1-Pad1)" VDD1 VSS1 DQ4 DQ3 DQ2 DQ1 "OSC32_OUT"
+    "OSC32_IN" VBAT "SW_RESET" "Bak_SPI_MOSI" "Bak_SPI_MISO" "S2_VDD11" "S2_VSS11" "Net-(U2-Pad142)"
+    "Net-(U2-Pad141)" "Net-(U2-Pad140)" "Net-(U2-Pad139)" "Net-(R32-Pad2)" "Net-(U2-Pad137)" "Net-(U2-Pad136)" "S2_S4_SPI3_MOSI" "S2_S4_SPI3_MISO"
+    "S2_S4_SPI3_SCLK" "Net-(U2-Pad132)" "S2_VDD10" "S2_VSS10" "Net-(U2-Pad129)" "Net-(U2-Pad128)" "Net-(U2-Pad127)" "Net-(U2-Pad126)"
+    "Net-(U2-Pad125)" "Net-(U2-Pad124)" "Net-(U2-Pad123)" "Net-(U2-Pad122)" "S2_VDD9" "S2_VSS9" "Net-(U2-Pad119)" "Net-(U2-Pad118)"
+    "Net-(U2-Pad117)" "Net-(U2-Pad116)" "Net-(U2-Pad115)" "Net-(U2-Pad114)" "Net-(U2-Pad113)" "Net-(U2-Pad112)" "Net-(U2-Pad111)" "Net-(U2-Pad110)"
+    "S2_SWCLK" "S2_VDD8" "S2_VSS8" "Net-(U2-Pad106)" "S2_SWDIO" "Net-(U2-Pad104)" "Net-(U2-Pad103)" "Net-(U2-Pad102)"
+    "Net-(U2-Pad101)" "Net-(U2-Pad100)" "Net-(U2-Pad99)" "Net-(U2-Pad98)" "Net-(U2-Pad97)" "Net-(U2-Pad96)" "S2_VDD7" "S2_VSS7"
+    "Net-(U2-Pad93)" "Net-(U2-Pad92)" "Net-(U2-Pad91)" "Net-(U2-Pad90)" "Net-(U2-Pad89)" "Net-(U2-Pad88)" "Net-(U2-Pad87)" "Net-(U2-Pad86)"
+    "Net-(U2-Pad85)" "S2_VDD6" "S2_VSS6" "Net-(U2-Pad82)" "Net-(U2-Pad81)" "Net-(U2-Pad80)" "Net-(U2-Pad79)" "Net-(U2-Pad78)"
+    "Net-(U2-Pad77)" "S2_S3_SPI2_MOSI" "S2_S3_SPI2_MISO" "S2_S3_SPI2_SCLK" "Net-(U2-Pad73)" "S2_VDD5" "S2_VSS5" "Net-(U2-Pad70)"
+    "Net-(U2-Pad69)" "Net-(U2-Pad68)" "Net-(U2-Pad67)" "Net-(U2-Pad66)" "Net-(U2-Pad65)" "Net-(U2-Pad64)" "Net-(U2-Pad63)" "S2_VDD4"
+    "S2_VSS4" "Net-(U2-Pad60)" "Net-(U2-Pad59)" "Net-(U2-Pad58)" "Net-(U2-Pad57)" "Net-(U2-Pad56)" "Net-(U2-Pad55)" "Net-(U2-Pad54)"
+    "Net-(U2-Pad53)" "S2_VDD3" "S2_VSS3" "Net-(U2-Pad50)" "Net-(U2-Pad49)" "Net-(R33-Pad1)" "S2_ADC07" "S2_ADC06"
+    "S2_ADC13" "S2_ADC12" "S2_ADC05" "S2_VDD2" "S2_VSS2" "S2_ADC04" "S2_ADC03" "S2_ADC02"
+    "S2_ADC01" "S2_VDDA" "S2_VREF+" "S2_VREF-" "S2_VSSA" "S2_ADC11" "S2_ADC10" "S2_ADC09"
+    "S2_ADC08" "Net-(R31-Pad2)" "Net-(C69-Pad1)" "Net-(C68-Pad1)" "S2_ADC18" "S2_ADC17" "S2_ADC16" "S2_ADC15"
+    "S2_ADC14" "S2_VDD1" "S2_VSS1" "Net-(U2-Pad15)" "Net-(U2-Pad14)" "Net-(U2-Pad13)" "Net-(U2-Pad12)" "Net-(U2-Pad11)"
+    "Net-(U2-Pad10)" "Net-(U2-Pad9)" "Net-(U2-Pad8)" "Net-(U2-Pad7)" "Net-(U2-Pad6)" "Net-(U2-Pad5)" "Net-(U2-Pad4)" "S3_VDD11"
+    "S3_VSS11" "Net-(U3-Pad142)" "Net-(U3-Pad141)" "Net-(U3-Pad140)" "Net-(U3-Pad139)" "Net-(R36-Pad2)" "Net-(U3-Pad137)" "Net-(U3-Pad136)"
+    "S3_SPI3_MOSI" "S3_SPI3_MISO" "S3_SPI3_SCK" "Net-(U3-Pad132)" "S3_VDD10" "S3_VSS10" "Net-(U3-Pad129)" "Net-(U3-Pad128)"
+    "Net-(U3-Pad127)" "Net-(U3-Pad126)" "Net-(U3-Pad125)" "Net-(U3-Pad124)" "Net-(U3-Pad123)" "Net-(U3-Pad122)" "S3_VDD9" "S3_VSS9"
+    "Net-(U3-Pad119)" "Net-(U3-Pad118)" "Net-(U3-Pad117)" "Net-(U3-Pad116)" "Net-(U3-Pad115)" "Net-(U3-Pad114)" "Net-(U3-Pad113)" "Net-(U3-Pad112)"
+    "Net-(U3-Pad111)" "Net-(U3-Pad110)" "S3_SWCLK" "S3_VDD8" "S3_VSS8" "Net-(U3-Pad106)" "S3_SWDIO" "Net-(U3-Pad104)"
+    "Net-(U3-Pad103)" "Net-(U3-Pad102)" "Net-(U3-Pad101)" "Net-(U3-Pad100)" "Net-(U3-Pad99)" "Net-(U3-Pad98)" "Net-(U3-Pad97)" "Net-(U3-Pad96)"
+    "S3_VDD7" "S3_VSS7" "Net-(U3-Pad93)" "Net-(U3-Pad92)" "Net-(U3-Pad91)" "Net-(U3-Pad90)" "Net-(U3-Pad89)" "Net-(U3-Pad88)"
+    "Net-(U3-Pad87)" "Net-(U3-Pad86)" "Net-(U3-Pad85)" "S3_VDD6" "S3_VSS6" "Net-(U3-Pad82)" "Net-(U3-Pad81)" "Net-(U3-Pad80)"
+    "Net-(U3-Pad79)" "Net-(U3-Pad78)" "Net-(U3-Pad77)" "S3_SPI2_MOSI" "S3_SPI2_MISO" "S3_SPI2_SCLK" "Net-(U3-Pad73)" "S3_VDD5"
+    "S3_VSS5" "Net-(U3-Pad70)" "Net-(U3-Pad69)" "Net-(U3-Pad68)" "Net-(U3-Pad67)" "Net-(U3-Pad66)" "Net-(U3-Pad65)" "Net-(U3-Pad64)"
+    "Net-(U3-Pad63)" "S3_VDD4" "S3_VSS4" "Net-(U3-Pad60)" "Net-(U3-Pad59)" "Net-(U3-Pad58)" "Net-(U3-Pad57)" "Net-(U3-Pad56)"
+    "Net-(U3-Pad55)" "Net-(U3-Pad54)" "Net-(U3-Pad53)" "S3_VDD3" "S3_VSS3" "Net-(U3-Pad50)" "Net-(U3-Pad49)" "Net-(R37-Pad1)"
+    "S3_ADC07" "S3_ADC06" "S3_ADC13" "S3_ADC12" "S3_ADC05" "S3_VDD2" "S3_VSS2" "S3_ADC04"
+    "S3_ADC03" "S3_ADC02" "S3_ADC01" "S3_VDDA" "S3_VREF+" "S3_VREF-" "S3_VSSA" "S3_ADC11"
+    "S3_ADC10" "S3_ADC09" "S3_ADC08" "Net-(R35-Pad2)" "Net-(C71-Pad1)" "Net-(C70-Pad1)" "S3_ADC18" "S3_ADC17"
+    "S3_ADC16" "S3_ADC15" "S3_ADC14" "S3_VDD1" "S3_VSS1" "Net-(U3-Pad15)" "Net-(U3-Pad14)" "Net-(U3-Pad13)"
+    "Net-(U3-Pad12)" "Net-(U3-Pad11)" "Net-(U3-Pad10)" "Net-(U3-Pad9)" "Net-(U3-Pad8)" "Net-(U3-Pad7)" "Net-(U3-Pad6)" "Net-(U3-Pad5)"
+    "Net-(U3-Pad4)" "S4_VDD11" "S4_VSS11" "Net-(U4-Pad142)" "Net-(U4-Pad141)" "Net-(U4-Pad140)" "Net-(U4-Pad139)" "Net-(R39-Pad2)"
+    "Net-(U4-Pad137)" "Net-(U4-Pad136)" "S4_SPI3_MOSI" "S4_SPI3_MISO" "S4_SPI3_SCK" "Net-(U4-Pad132)" "S4_VDD10" "S4_VSS10"
+    "Net-(U4-Pad129)" "Net-(U4-Pad128)" "Net-(U4-Pad127)" "Net-(U4-Pad126)" "Net-(U4-Pad125)" "Net-(U4-Pad124)" "Net-(U4-Pad123)" "Net-(U4-Pad122)"
+    "S4_VDD9" "S4_VSS9" "Net-(U4-Pad119)" "Net-(U4-Pad118)" "Net-(U4-Pad117)" "Net-(U4-Pad116)" "Net-(U4-Pad115)" "Net-(U4-Pad114)"
+    "Net-(U4-Pad113)" "Net-(U4-Pad112)" "Net-(U4-Pad111)" "Net-(U4-Pad110)" "S4_SWCLK" "S4_VDD8" "S4_VSS8" "Net-(U4-Pad106)"
+    "S4_SWDIO" "Net-(U4-Pad104)" "Net-(U4-Pad103)" "Net-(U4-Pad102)" "Net-(U4-Pad101)" "Net-(U4-Pad100)" "Net-(U4-Pad99)" "Net-(U4-Pad98)"
+    "Net-(U4-Pad97)" "Net-(U4-Pad96)" "S4_VDD7" "S4_VSS7" "Net-(U4-Pad93)" "Net-(U4-Pad92)" "Net-(U4-Pad91)" "Net-(U4-Pad90)"
+    "Net-(U4-Pad89)" "Net-(U4-Pad88)" "Net-(U4-Pad87)" "Net-(U4-Pad86)" "Net-(U4-Pad85)" "S4_VDD6" "S4_VSS6" "Net-(U4-Pad82)"
+    "Net-(U4-Pad81)" "Net-(U4-Pad80)" "Net-(U4-Pad79)" "Net-(U4-Pad78)" "Net-(U4-Pad77)" "S4_SPI2_MOSI" "S4_SPI2_MISO" "S4_SPI2_SCLK"
+    "Net-(U4-Pad73)" "S4_VDD5" "S4_VSS5" "Net-(U4-Pad70)" "Net-(U4-Pad69)" "Net-(U4-Pad68)" "Net-(U4-Pad67)" "Net-(U4-Pad66)"
+    "Net-(U4-Pad65)" "Net-(U4-Pad64)" "Net-(U4-Pad63)" "S4_VDD4" "S4_VSS4" "Net-(U4-Pad60)" "Net-(U4-Pad59)" "Net-(U4-Pad58)"
+    "Net-(U4-Pad57)" "Net-(U4-Pad56)" "Net-(U4-Pad55)" "Net-(U4-Pad54)" "Net-(U4-Pad53)" "S4_VDD3" "S4_VSS3" "Net-(U4-Pad50)"
+    "Net-(U4-Pad49)" "Net-(R40-Pad1)" "S4_ADC07" "S4_ADC06" "S4_ADC13" "S4_ADC12" "S4_ADC05" "S4_VDD2"
+    "S4_VSS2" "S4_ADC04" "S4_ADC03" "S4_ADC02" "S4_ADC01" "S4_VDDA" "S4_VREF+" "S4_VREF-"
+    "S4_VSSA" "S4_ADC11" "S4_ADC10" "S4_ADC09" "S4_ADC08" "Net-(R38-Pad2)" "Net-(C73-Pad1)" "Net-(C72-Pad1)"
+    "S4_ADC18" "S4_ADC17" "S4_ADC16" "S4_ADC15" "S4_ADC14" "S4_VDD1" "S4_VSS1" "Net-(U4-Pad15)"
+    "Net-(U4-Pad9)" "Net-(U4-Pad8)" "Net-(U4-Pad4)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
